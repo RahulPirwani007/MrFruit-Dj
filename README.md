@@ -1,27 +1,30 @@
 # 🎵 MrFruit DJ
 
-MrFruit DJ is a modern Flutter-based music player application that allows users to discover trending songs, browse artists, explore albums, and enjoy seamless music playback with a beautiful user interface.
+MrFruit DJ is a modern Flutter-based music player application that allows users to discover trending songs, browse artists, explore albums, search for music, and enjoy seamless audio playback with a clean and responsive user interface.
 
 ---
 
 ## ✨ Features
 
-- 🎶 Trending Songs Slider
+- 🎵 Trending Music Slider
+- 🔍 Search Songs, Artists & Albums
 - 🎤 Browse Popular Artists
-- 💿 Explore Music Albums
-- ▶️ Audio Playback Support
-- 🎨 Modern Dark UI Design
+- 💿 Explore Albums
+- ❤️ Add Songs to Favorites
+- ▶️ High-Quality Music Playback
+- ⏯️ Play, Pause & Resume Music
+- 🎨 Beautiful Dark Theme UI
 - 📱 Responsive Flutter Interface
-- 🌐 Fetch Music Data using API
+- 🌐 Fetch Music Data Using REST API
 - ⚡ Smooth and Fast Performance
 
 ---
 
 ## 🎥 Demo Video
 
-> Watch the application demo here:
+Watch the application demo here:
 
-[▶️ Watch Demo Video](https://res.cloudinary.com/dgqjl3ou6/video/upload/v1785301071/Screen_Recording_2026-07-29_102608_u0ep9k.mp4)
+👉 https://res.cloudinary.com/dgqjl3ou6/video/upload/v1785301071/Screen_Recording_2026-07-29_102608_u0ep9k.mp4
 
 ---
 
@@ -31,27 +34,43 @@ MrFruit DJ is a modern Flutter-based music player application that allows users 
 - Dart
 - Material Design
 - REST API
-- Audio Player Package
+- Just Audio
+- Go Router
 
 ---
 
 ## 📂 Project Structure
 
-```
+```text
 lib/
+│
+├── layout/
+│   └── main_layout.dart
+│
+├── routes/
+│   └── app_router.dart
+│
+├── screens/
+│   ├── album_detail_page.dart
+│   ├── favorite_page.dart
+│   ├── home_page.dart
+│   ├── search_page.dart
+│   └── singer_page.dart
 │
 ├── services/
 │   ├── api_services.dart
 │   └── audio_player_service.dart
 │
+├── utils/
+│   └── favorite_utils.dart
+│
 ├── widgets/
 │   ├── album_section.dart
+│   ├── app_background.dart
 │   ├── artist_section.dart
-│   ├── trending_slider.dart
-│   └── app_background.dart
-│
-├── screens/
-│   └── home_page.dart
+│   ├── lang_section.dart
+│   ├── mini_player.dart
+│   └── trending_slider.dart
 │
 └── main.dart
 ```
@@ -66,10 +85,10 @@ lib/
 git clone https://github.com/RahulPirwani007/MrFruit-Dj.git
 ```
 
-### 2. Open the project
+### 2. Navigate to the project
 
 ```bash
-cd mrfruit-dj
+cd MrFruit-Dj
 ```
 
 ### 3. Install dependencies
@@ -88,12 +107,18 @@ flutter run
 
 ## 📦 Dependencies
 
-Some major packages used in this project:
-
-- flutter
-- http
-- audioplayers (or your audio package)
-- cached_network_image
+| Package               | Version        |
+| --------------------- | -------------- |
+| cupertino_icons       | ^1.0.8         |
+| http                  | ^1.6.0         |
+| carousel_slider       | ^5.1.2         |
+| cached_network_image  | ^3.4.1         |
+| just_audio            | ^0.10.5        |
+| audio_session         | ^0.2.3         |
+| audio_service         | ^0.18.18       |
+| just_audio_background | ^0.0.1-beta.17 |
+| go_router             | ^17.3.0        |
+| shared_preferences    | ^2.5.3         |
 
 ---
 
@@ -106,20 +131,21 @@ The application includes:
 - Albums
 - Bollywood Music
 - International Music
+- Devotional Music
 
 ---
 
 ## 📡 API
 
-This application retrieves music information from an online music API through:
+MrFruit DJ fetches music information from an online music API, including:
 
-- Songs Search
+- Song Search
 - Artist Search
 - Album Search
 
-API implementation is available inside:
+API implementation:
 
-```
+```text
 lib/services/api_services.dart
 ```
 
@@ -127,12 +153,14 @@ lib/services/api_services.dart
 
 ## 🎨 UI Features
 
-- Gradient Background
-- Smooth Scrolling
-- Image Slider
-- Artist Cards
-- Album Cards
-- Bottom Mini Player
+- 🎨 Gradient Background
+- 🎠 Trending Songs Carousel
+- 🖼️ Cached Network Images
+- 🎤 Artist Cards
+- 💿 Album Cards
+- 🎵 Bottom Mini Player
+- 📱 Responsive Layout
+- ⚡ Smooth Navigation
 
 ---
 
@@ -145,20 +173,40 @@ lib/services/api_services.dart
 
 ## 👨‍💻 Developer
 
-**MrFruit DJ**
+**Rahul Pirwani**
 
 Flutter Developer
+
+GitHub: https://github.com/RahulPirwani007
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome!
+
+If you'd like to improve this project:
+
+1. Fork the repository.
+2. Create a new feature branch.
+3. Commit your changes.
+4. Push your branch.
+5. Open a Pull Request.
 
 ---
 
 ## 📄 License
 
-This project is created for learning and personal development purposes.
+This project is intended for educational and personal learning purposes.
 
 ---
 
 ## ⭐ Show Your Support
 
-If you like this project, please give it a ⭐ on GitHub.
+If you like this project, please consider giving it a ⭐ on GitHub.
 
-Happy Coding! 🎧
+Your support helps motivate future improvements and new Flutter projects.
+
+---
+
+# 🎧 Happy Coding & Enjoy Music!
